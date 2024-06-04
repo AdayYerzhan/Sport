@@ -1,9 +1,45 @@
+body {
+  padding-top: 150px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.app {
-  font-size: 30px;
+.banner-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('https://bassport.kz/banner.jpg') no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  position: relative;
+  z-index: 2;
+
+  .app {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) { // 1260px
+  body {
+    padding-top: 0;
+  }
+
+  .banner-bg {
+    display: none;
+  }
 }
